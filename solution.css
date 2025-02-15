@@ -1,0 +1,9 @@
+The solution involves using the `min()` function within the `calc()` function to ensure the width never becomes negative:
+
+```css
+.container {
+  width: calc(min(50% - 10px, 100vw));
+}
+```
+
+This revised code will now set the width to `50% - 10px` if that value is positive, otherwise it defaults to `100vw` ensuring that the width is always at least zero and avoiding the issue of negative widths.
